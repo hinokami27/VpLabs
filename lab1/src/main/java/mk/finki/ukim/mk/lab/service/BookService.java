@@ -10,7 +10,9 @@ public interface BookService {
     void addAuthorToBook(Long authorId, String isbn);
     Book findBookByIsbn(String isbn);
 
-    void saveBook(String title, String isbn, String genre, int year, Long id);
+    void saveBook(String title, String isbn, String genre, int year,Long id);
+    Book findBookById(Long id);
+    void deleteBookById(Long id);
 
     void deleteById(Long id);
 }
