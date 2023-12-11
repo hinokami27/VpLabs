@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Add new Author to Book</title>
+  <style type = "text/css">
+    body {
+      width: 800px;
+      margin: auto;
+    }
+    table {
+      width:100%;
+    }
+    table, td, th {
+      border: 1px solid black;
+      padding:3px 2px;
+    }
+    section {
+      float: left;
+      margin: 0 1.5%;
+      width: 63%;
+    }
+    aside {
+      float: right;
+      margin: 0 1.5%;
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+<header>
+</header>
+<section>
+  <!-- Make changes to this code to dynamically display radio buttons for each author as in the example -->
+  <h1>Reviews: </h1>
+  <ul style="list-style-type: none" th:each="review : ${reviews}">
+    <li th:text="${'The score is: '+review.score}" >
+    </li>
+  </ul>
+  <br/>
+</section>
+</body>
+</html>

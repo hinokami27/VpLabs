@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- dynamically display data -- > <!-->
+<header>
+   <h1>Book title</h1>
+    <p th:text="${book.title}"></p>
+</header>
+        <h2>Genre</h2>
+        <p th:text="${book.genre}"></p>
+        <h2>Year</h2>
+        <p th:text="${book.year}"></p>
+        <h2>Authors:</h2>
+        <ul th:each="author : ${authors}">
+            <li th:text="${author.name +'  '+ author.surname}" th:value="${author.id}"></li>
+        </ul>
+<h2>Store</h2>
+<p th:text="${book.bookStore.name}"></p>
+
+
+</body>
+</html>
